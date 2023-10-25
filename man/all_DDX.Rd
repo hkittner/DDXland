@@ -17,6 +17,3 @@ Dataframe with SampleID, Station, Depth, and Concentration. Detection Limit is i
 \description{
 Load all alpha CSV files into a dataframe
 }
-\examples{
-all_DDX("../../data/raw_data/Pesticides", ND_is_zero = TRUE)
-}

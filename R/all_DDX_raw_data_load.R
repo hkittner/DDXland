@@ -6,7 +6,7 @@
 #' @return Dataframe with SampleID, Station, Depth, and Concentration. Detection Limit is included when NEITHER is selected.
 #' @export
 #'
-#' @examples all_DDX("../../data/raw_data/Pesticides", ND_is_zero = TRUE)
+#' @examples
 all_DDX <- function(path_to_files, ND_is_zero = TRUE){
 
   files <- list.files(path = path_to_files, pattern="*.csv", full.names = TRUE)
