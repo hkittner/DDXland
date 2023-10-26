@@ -12,7 +12,7 @@ all_DDX(path_to_files, ND_is_zero = TRUE)
 \item{ND_is_zero}{Replaces ND values with 0 (TRUE) or Detection Limit (FALSE), or neither (NEITHER). Defaults to TRUE}
 }
 \value{
-Dataframe with SampleID, Station, Depth, and Concentration. Detection Limit is included when NEITHER is selected.
+Dataframe with SampleID, Station, Depth, Replicate, and Concentration. Detection Limit is included when NEITHER is selected.
 }
 \description{
 Load all alpha CSV files into a dataframe
