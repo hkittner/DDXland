@@ -3,7 +3,7 @@
 #' @param path_to_files Path to the directory containing the alpha .csv files
 #' @param ND_is_zero Replaces ND values with 0 (TRUE) or Detection Limit (FALSE), or neither (NEITHER). Defaults to TRUE
 #'
-#' @return Dataframe with SampleID, Station, Depth, and Concentration. Detection Limit is included when NEITHER is selected.
+#' @return Dataframe with SampleID, Station, Depth, Replicate, and Concentration. Detection Limit is included when NEITHER is selected.
 #' @export
 #'
 #' @examples
