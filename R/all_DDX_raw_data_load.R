@@ -15,8 +15,7 @@ all_DDX <- function(path_to_files, ND_is_zero = TRUE){
 
   for (x in 1:length(files)) {
     print(files[x])
-    alpha_DDX <- DDX(files[x]) %>%
-      filter(Station != "FIELD BLANK")
+    alpha_DDX <- DDX(files[x])
 
     all_alpha <- rbind(all_alpha, alpha_DDX)
   }

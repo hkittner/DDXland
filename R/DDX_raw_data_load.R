@@ -13,7 +13,8 @@ DDX <- function(dataset){
              Analysis == "2,4'-DDD" |
              Analysis == "4,4'-DDD" |
              Analysis == "2,4'-DDT" |
-             Analysis == "4,4'-DDT") %>%
+             Analysis == "4,4'-DDT" |
+             Client.ID != "FIELD BLANK") %>%
     mutate(Analysis = if_else(Analysis == "2,4'-DDT",
                               true = "2_4_DDT",
                               false = Analysis),
@@ -35,5 +36,6 @@ DDX <- function(dataset){
     separate(Client.ID, c("Station","Depth","Replicate"), "-") %>%
     rename("Concentration_ug_kg" = "Concentration") %>%
     rename("Compound" = "Analysis") %>%
-    select(Sample.ID, Station, Depth, Compound, Concentration_ug_kg, Detection.Limit)
+    filter(Depth == "B") %>%
+    select(Sample.ID, Station, Depth, Replicate, Compound, Concentration_ug_kg, Detection.Limit)
 }
