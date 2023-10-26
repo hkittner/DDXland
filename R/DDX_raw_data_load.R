@@ -36,6 +36,6 @@ DDX <- function(dataset){
     separate(Client.ID, c("Station","Depth","Replicate"), "-") %>%
     rename("Concentration_ug_kg" = "Concentration") %>%
     rename("Compound" = "Analysis") %>%
-    filter(Depth == "B") %>%
+    filter(Depth != "B") %>%
     select(Sample.ID, Station, Depth, Replicate, Compound, Concentration_ug_kg, Detection.Limit)
 }
